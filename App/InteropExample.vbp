@@ -1,8 +1,9 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{CC7518BB-34A4-4FA4-B80E-D195059DD36E}#1.0#0#..\InteropExample\bin\Release\InteropExample.tlb#InteropExample
+Reference=*\G{CC7518BB-34A4-4FA4-B80E-D195059DD36E}#1.0#0#..\InteropExample\bin\Debug\InteropExample.tlb#InteropExample
 Form=Forms\Main.frm
 Object={CC7518BB-34A4-4FA4-B80E-D195059DD36E}#1.0#0; mscoree.dll
+Form=Forms\Form2.frm
 IconForm="Form1"
 Startup="Form1"
 ExeName32="InteropExample.exe"
