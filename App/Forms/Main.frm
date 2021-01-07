@@ -52,7 +52,9 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub TheControl_Click()
-    Dim oCalc As Calculator
-    Set oCalc = New Calculator
-    Me.AppTitle.Caption = CStr(oCalc.Add(Rnd * 100, 4))
+    Dim oDialog As Interop_ExampleForm
+    Set oDialog = New Interop_ExampleForm
+    oDialog.Caption = "Example Dialog"
+    oDialog.Content = "Message goes here"
+    oDialog.Show vbModal
 End Sub

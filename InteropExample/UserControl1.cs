@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
@@ -220,6 +221,7 @@ namespace InteropExample
         // Ensures that tabbing across VB6 and .NET controls works as expected
         private void UserControl1_LostFocus(object sender, System.EventArgs e)
         {
+            Debug.Print("USerControl1_LostFocus");
             ActiveXControlHelpers.HandleFocus(this);
         }
 
@@ -227,7 +229,6 @@ namespace InteropExample
         [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.UnmanagedCode)]
         protected override void WndProc(ref Message m)
         {
-
             const int WM_SETFOCUS = 0x7;
             const int WM_PARENTNOTIFY = 0x210;
             const int WM_DESTROY = 0x2;
